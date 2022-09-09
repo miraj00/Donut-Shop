@@ -14,6 +14,7 @@ export class DonutService {
   constructor(private httpClient:HttpClient) { }
 
   // function to get list of donuts from apiEndpoint : 
+  // here we are setting results as observable and subscribing this data in home-page component  
   getDonutList(): Observable<Result[]>{
     return this.httpClient.get<Donuts>(environment.apiEndpoint).pipe(
       map((data)=>data.results)

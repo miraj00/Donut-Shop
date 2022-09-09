@@ -1,1 +1,12 @@
-<p>home-page works!</p>
+<h1>{{title}}  </h1>
+    
+<p> Today is  : {{today | date}}</p>
+
+<div> Available Donuts : </div> 
+
+<!-- here we want to present a list of available donuts as a hyperlink  -->
+<ul >
+    <li *ngFor="let donut of donutResults">
+         <a [routerLink] = "['/donutDetail', donut.id]">{{donut.name}}</a>
+    </li>
+</ul>
