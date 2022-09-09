@@ -11,3 +11,6 @@
 <img  *ngIf="donut.photo" [src]="donut.photo" style="width:400px;height:300px;">
 
 <p>Photo attribution: <a href="{{donut.photo_attribution}}" target="_blank">{{donut.photo_attribution}}</a></p>
+
+<br>
+<button [routerLink] = "['/shopping-cart', donut.id]"    > Add to Cart</button>

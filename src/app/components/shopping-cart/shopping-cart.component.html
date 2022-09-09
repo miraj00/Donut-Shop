@@ -1,1 +1,23 @@
-<p>shopping-cart works!</p>
+<h1>shopping-cart</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Donut</th>
+            <th scope="col">Calories</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{donut.name}}</td>
+            <td>{{donut.calories}}</td>
+            <td> $ 1.00  </td>
+            <td><button (click)="removeDonut">Remove</button></td>
+       </tr>
+    </tbody>
+</table>
+
+<p> Total Calories : </p>
+<p> Total Price : $    </p>
