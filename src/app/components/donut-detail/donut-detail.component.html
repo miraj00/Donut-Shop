@@ -1,4 +1,4 @@
-<p>Name: {{donut.name}}</p>
+<h3>Name: {{donut.name}}</h3>
 
 <p>Calories: {{donut.calories}} cals</p>
 
@@ -8,6 +8,6 @@
     <li *ngFor="let extra of donut.extras">{{extra}}</li>
 </ul>
 
-<img *ngIf="donut.photo" [src]="donut.photo">
+<img  *ngIf="donut.photo" [src]="donut.photo" style="width:400px;height:300px;">
 
 <p>Photo attribution: <a href="{{donut.photo_attribution}}" target="_blank">{{donut.photo_attribution}}</a></p>
