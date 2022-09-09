@@ -7,6 +7,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { DonutDetailComponent } from './components/donut-detail/donut-detail.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
