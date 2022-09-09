@@ -12,6 +12,12 @@ export class ShoppingCartComponent implements OnInit {
 
   donut:Donut | any;
 
+  addtodonutsList:string[] = [];
+
+  Calories: number = 0;
+
+  total: number = 1;
+
   constructor(private service:DonutService, private route:ActivatedRoute) {
 
 
@@ -27,19 +33,30 @@ export class ShoppingCartComponent implements OnInit {
   getDonutDetail(id:string){
     this.service.getDonutDetail(id).subscribe((data)=>{
       this.donut = data;
+  //    this.addtodonutsList.push(this.donut);
+
     });
   }
 
-  removeDonut(){
- //    
-      
+
+
+  removeDonut(id:any){
+   // this.addtodonutsList=this.addtodonutsList.splice(id,1);
+   //this.addtodonutsList=this.donut.splice(id,1);  
+      }    
+     
+  caloriesTotal() {
+   //for(var i=0; i<this.addtodonutsList.length; i++) {
+     this.Calories = this.donut.calories;
+   // }
+   }
+
+   totalPrice() {
+     for(var i=1; i<this.addtodonutsList.length; i++){
+    this.total += i*1;
+
+    }
+   }    
 
   }
 
-
-
-
-
-
-
-}

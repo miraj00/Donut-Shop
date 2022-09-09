@@ -10,14 +10,14 @@
     </thead>
 
     <tbody>
-        <tr>
+        <tr let >
             <td>{{donut.name}}</td>
             <td>{{donut.calories}}</td>
             <td> $ 1.00  </td>
-            <td><button (click)="removeDonut">Remove</button></td>
+            <td><button (click)="removeDonut(donut.id)">Remove</button></td>
        </tr>
     </tbody>
 </table>
 
-<p> Total Calories : </p>
-<p> Total Price : $    </p>
+<p> Total Calories :{{donut.calories}} </p>
+<p> Total Price : $ {{total}}   </p>
